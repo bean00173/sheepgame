@@ -337,6 +337,9 @@
 "Assets/RW/Scripts/Rotate.cs"
 "Assets/RW/Scripts/Sheep.cs"
 "Assets/RW/Scripts/SheepSpawner.cs"
+"Assets/RW/Scripts/Title/ChangeColourOnMouseOver.cs"
+"Assets/RW/Scripts/Title/QuitButton.cs"
+"Assets/RW/Scripts/Title/StartButton.cs"
 "Assets/RW/Scripts/TweenScale.cs"
 "Assets/RW/Scripts/UIManager.cs"
 -langversion:9.0
