@@ -1,0 +1,41 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class AudioManager : MonoBehaviour
+{
+
+    public static AudioManager Instance;
+
+    public AudioClip shootClip;
+    public AudioClip sheepHitClip;
+    public AudioClip sheepDroppedClip;
+
+    private Vector3 cameraPosition;
+
+    private void Awake()
+    {
+        Instance = this;
+        cameraPosition = Camera.main.transform.position;
+    }
+
+    public void PlayShootClip()
+    {
+        PlaySound(shootClip);
+    }
+
+    public void PlaySheepHitClip()
+    {
+        PlaySound(sheepHitClip);
+    }
+
+    public void PlaySheepDroppedClip()
+    {
+        PlaySound(sheepDroppedClip);
+    }
+
+    private void PlaySound(AudioClip clip)
+    {
+        AudioSource.PlayClipAtPoint(clip, cameraPosition);
+    }
+}
