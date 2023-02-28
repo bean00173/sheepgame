@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class SheepSpawner : MonoBehaviour
 {
+
+    public static SheepSpawner Instance;
+
     public bool canSpawn = true;
 
     public GameObject sheepPrefab;
@@ -11,6 +14,11 @@ public class SheepSpawner : MonoBehaviour
     public float timeBetweenSpawns;
 
     private List<GameObject> sheepList = new List<GameObject>();
+
+    private void Awake()
+    {
+        Instance = this;
+    }
 
     // Start is called before the first frame update
     void Start()

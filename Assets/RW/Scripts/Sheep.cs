@@ -46,6 +46,8 @@ public class Sheep : MonoBehaviour
 
         AudioManager.Instance.PlaySheepHitClip();
 
+        GameManager.Instance.SheepSaved();
+
         Destroy(gameObject, gotHayDestroyDelay);
     }
 
@@ -68,6 +70,8 @@ public class Sheep : MonoBehaviour
         dropped = true;
         myRigidbody.isKinematic = false;
         myCollider.isTrigger = false;
+
+        GameManager.Instance.SheepDropped();
 
         AudioManager.Instance.PlaySheepDroppedClip();
 
