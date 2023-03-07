@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.SocialPlatforms.Impl;
 using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
@@ -49,6 +50,10 @@ public class GameManager : MonoBehaviour
 
     public void GameOver()
     {
+        if(sheepSaved > GameSettings.highScore)
+        {
+            GameSettings.highScore = sheepSaved;
+        }
 
         SheepSpawner.Instance.canSpawn = false;
         SheepSpawner.Instance.DestroyAllSheep();
@@ -60,12 +65,5 @@ public class GameManager : MonoBehaviour
     {
         yield return new WaitForSeconds(1);
         UIManager.Instance.ShowGameOverWindow();
-    }
-
-    public void ResetGame()
-    {
-        sheepSaved = 0;
-        sheepDropped = 0;
-        SheepSpawner.Instance.canSpawn = true;
     }
 }

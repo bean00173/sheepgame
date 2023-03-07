@@ -58,6 +58,7 @@
   <ItemGroup>
     <Compile Include="Assets\RW\Scripts\GameManager.cs" />
     <Compile Include="Assets\RW\Scripts\Move.cs" />
+    <Compile Include="Assets\RW\Scripts\HayMachineSwitcher.cs" />
     <Compile Include="Assets\RW\Scripts\AudioManager.cs" />
     <Compile Include="Assets\RW\Scripts\UIManager.cs" />
     <Compile Include="Assets\RW\Scripts\HayMachine.cs" />
@@ -68,11 +69,11 @@
     <Compile Include="Assets\RW\Scripts\Title\ChangeColourOnMouseOver.cs" />
     <Compile Include="Assets\RW\Scripts\Title\StartButton.cs" />
     <Compile Include="Assets\RW\Scripts\SheepSpawner.cs" />
-    <Compile Include="Assets\RW\Scripts\DestroyOnTrigger.cs" />
-    <Compile Include="Assets\RW\Scripts\DestroyTimer.cs" />
     <Compile Include="Assets\RW\Scripts\Title\HayMachineColor.cs" />
     <Compile Include="Assets\RW\Scripts\GameSettings.cs" />
-    <Compile Include="Assets\RW\Scripts\HayMachineSwitcher.cs" />
+    <Compile Include="Assets\RW\Scripts\DestroyOnTrigger.cs" />
+    <Compile Include="Assets\RW\Scripts\DestroyTimer.cs" />
+    <Compile Include="Assets\RW\Scripts\Title\HighScore.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
