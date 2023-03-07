@@ -74,6 +74,7 @@
     <Compile Include="Assets\RW\Scripts\DestroyOnTrigger.cs" />
     <Compile Include="Assets\RW\Scripts\Title\HighScore.cs" />
     <Compile Include="Assets\RW\Scripts\DestroyTimer.cs" />
+    <Compile Include="Assets\RW\Scripts\SheepSpeedController.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

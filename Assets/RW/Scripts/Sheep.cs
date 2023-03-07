@@ -5,7 +5,7 @@ using UnityEngine;
 public class Sheep : MonoBehaviour
 {
 
-    public float runSpeed;
+    private float runSpeed;
     public float gotHayDestroyDelay;
     private bool hitByHay;
     private bool dropped;
@@ -24,7 +24,35 @@ public class Sheep : MonoBehaviour
     {
         myCollider = GetComponent<Collider>();
         myRigidbody = GetComponent<Rigidbody>();
+
+        runSpeed = GameManager.Instance.sheepRunSpeed;
+
+        /* Below was my initial method to change the runSpeed value of the sheep.
+         * As you can see the values are all hardcoded in.
+         * I instead opted to change to an Update based Timer that increases speed every 5 seconds 
+         * You can find the new implementation in the GameManager script Update()*/
+        //SetSpeed();
     }
+
+    //private void SetSpeed()
+    //{
+    //    //if(GameManager.Instance.sheepSaved > 5)
+    //    //{
+    //    //    runSpeed = runSpeed * 1.15f;
+    //    //}
+    //    //else if (GameManager.Instance.sheepSaved > 10)
+    //    //{
+    //    //    runSpeed = runSpeed * 1.25f;
+    //    //}
+    //    //else if (GameManager.Instance.sheepSaved > 15)
+    //    //{
+    //    //    runSpeed = runSpeed * 1.5f;
+    //    //}
+    //    //else if (GameManager.Instance.sheepSaved > 20)
+    //    //{
+    //    //    runSpeed = runSpeed * 2f;
+    //    //}
+    //}
 
     // Update is called once per frame
     void Update()

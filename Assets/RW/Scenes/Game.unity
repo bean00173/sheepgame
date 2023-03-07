@@ -514,6 +514,9 @@ MonoBehaviour:
   sheepSaved: 0
   sheepDropped: 0
   sheepDroppedBeforeGameOver: 3
+  timeBeforeSpeedIncrease: 5
+  speedMultiplier: 2
+  sheepRunSpeed: 10
 --- !u!4 &412202724
 Transform:
   m_ObjectHideFlags: 0
@@ -1277,6 +1280,7 @@ MonoBehaviour:
   - {fileID: 167817272}
   - {fileID: 1324647478}
   timeBetweenSpawns: 2
+  spawnMultiplier: 5
 --- !u!4 &2112093276
 Transform:
   m_ObjectHideFlags: 0

@@ -18,6 +18,12 @@ public class GameManager : MonoBehaviour
 
     public int sheepDroppedBeforeGameOver;
 
+    public float timeBeforeSpeedIncrease = 5;
+    public float speedMultiplier = 1.5f;
+    private float timer;
+    private float increaseIndex;
+    public float sheepRunSpeed;
+
     private void Awake()
     {
         Instance = this;
@@ -28,6 +34,20 @@ public class GameManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape))
         {   
             SceneManager.LoadScene("Title");
+        }
+
+        if (timer < timeBeforeSpeedIncrease)
+        {
+            timer += Time.deltaTime;
+        }
+        else if (timer >= timeBeforeSpeedIncrease)
+        {
+            timer = 0;
+            increaseIndex++;
+            if (increaseIndex < 5)
+            {
+                sheepRunSpeed = sheepRunSpeed + speedMultiplier;
+            }
         }
     }
 

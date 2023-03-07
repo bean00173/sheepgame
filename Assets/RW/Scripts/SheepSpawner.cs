@@ -15,6 +15,8 @@ public class SheepSpawner : MonoBehaviour
 
     private List<GameObject> sheepList = new List<GameObject>();
 
+    public float spawnMultiplier;
+
     private void Awake()
     {
         Instance = this;
@@ -45,6 +47,10 @@ public class SheepSpawner : MonoBehaviour
         while (canSpawn)
         {
             SpawnSheep();
+            if(GameManager.Instance.sheepSaved >= 5 && timeBetweenSpawns > 0.25f)
+            {
+                timeBetweenSpawns -= Time.deltaTime * spawnMultiplier;
+            }
             yield return new WaitForSeconds(timeBetweenSpawns);
         }
     }

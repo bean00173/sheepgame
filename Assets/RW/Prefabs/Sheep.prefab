@@ -82,6 +82,8 @@ MonoBehaviour:
   heartOffset: 4
   heartPrefab: {fileID: 3646211407830628148, guid: 94b368561670f58438d37e634316b534,
     type: 3}
+  timeBeforeSpeedIncrease: 5
+  speedMultiplier: 1.5
 --- !u!1001 &1665161742363527656
 PrefabInstance:
   m_ObjectHideFlags: 0
