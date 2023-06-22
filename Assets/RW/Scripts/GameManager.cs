@@ -18,7 +18,7 @@ public class GameManager : MonoBehaviour
 
     public int sheepDroppedBeforeGameOver;
 
-    public float timeBeforeSpeedIncrease = 5;
+    public float timeBeforeSpeedIncrease = 5; // A variable to store time between speed increments
     public float speedMultiplier = 1.5f;
     private float timer;
     private float increaseIndex;
@@ -36,17 +36,17 @@ public class GameManager : MonoBehaviour
             SceneManager.LoadScene("Title");
         }
 
-        if (timer < timeBeforeSpeedIncrease)
+        if (timer < timeBeforeSpeedIncrease) // check if timer less than necessary for increment
         {
-            timer += Time.deltaTime;
+            timer += Time.deltaTime; // if true increase time
         }
-        else if (timer >= timeBeforeSpeedIncrease)
+        else if (timer >= timeBeforeSpeedIncrease) // else check if timer is ready to increment
         {
-            timer = 0;
+            timer = 0; // reset timer for next increment
             increaseIndex++;
-            if (increaseIndex < 5)
+            if (increaseIndex < 5) // if speed hasn't increased more than max of 5 times
             {
-                sheepRunSpeed = sheepRunSpeed + speedMultiplier;
+                sheepRunSpeed = sheepRunSpeed + speedMultiplier; // new speed
             }
         }
     }
@@ -70,9 +70,9 @@ public class GameManager : MonoBehaviour
 
     public void GameOver()
     {
-        if(sheepSaved > GameSettings.highScore)
+        if(sheepSaved > GameSettings.highScore) // Add Method to GameOver Script to check if the current game Score is greater than the stored High Score
         {
-            GameSettings.highScore = sheepSaved;
+            GameSettings.highScore = sheepSaved; // update high score
         }
 
         SheepSpawner.Instance.canSpawn = false;

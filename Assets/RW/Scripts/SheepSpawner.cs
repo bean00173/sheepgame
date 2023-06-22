@@ -47,11 +47,11 @@ public class SheepSpawner : MonoBehaviour
         while (canSpawn)
         {
             SpawnSheep();
-            if(GameManager.Instance.sheepSaved >= 5 && timeBetweenSpawns > 0.25f)
+            if(GameManager.Instance.sheepSaved >= 5 && timeBetweenSpawns > 0.25f) // check if player has certain score and if spawn time is within acceptable limits
             {
-                timeBetweenSpawns -= Time.deltaTime * spawnMultiplier;
+                timeBetweenSpawns -= Time.deltaTime * spawnMultiplier; // if true decrease timeBetweenSpawns
             }
-            yield return new WaitForSeconds(timeBetweenSpawns);
+            yield return new WaitForSeconds(timeBetweenSpawns); // wait for next spawn
         }
     }
 
